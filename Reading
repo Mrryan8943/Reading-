@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Record</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Reading Record</h1>
+  <p>Who have you read with this year?</p>
+  
+  <button onclick="recordChoice('I have read with Mr. Ryan')">I have read with Mr. Ryan</button>
+  <button onclick="recordChoice('I have read with Sroy')">I have read with Sroy</button>
+  <button onclick="recordChoice('I haven’t read this year')">I haven’t read this year</button>
+  
+  <p id="message"></p>
+  
+  <script>
+    function recordChoice(choice) {
+      // Display confirmation message
+      document.getElementById('message').textContent = "Thank you! You selected: " + choice;
+
+      // Log the choice to the console (temporary)
+      console.log("Recorded: " + choice);
+
+      // (Optional advanced feature: send data to a server or database)
+    }
+  </script>
+</body>
+</html>
